@@ -1,0 +1,118 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.animated-text {
+  font-size: 24px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .loader-container {
+    height: 400px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 430px) {
+  .loader-container {
+    height: 80px;
+  }
+}
+.loader-svg {
+  width: 100px; /* Adjust the width of the SVG */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.cls-1 {
+  fill: #ef6827;
+}
+
+.cls-2 {
+  fill: #149585;
+}
+
+.cls-3 {
+  fill: #f0a91f;
+}
+
+.cls-4 {
+  fill: #5c58a5;
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4 {
+  fill-opacity: 0.5;
+}
+
+.cls-1 {
+  animation: leftToRight 6s infinite;
+}
+
+.cls-2 {
+  animation: topToBottom 6s infinite;
+}
+
+.cls-3 {
+  animation: rightToLeft 6s infinite;
+}
+
+.cls-4 {
+  animation: bottomToTop 6s infinite;
+}
+
+@keyframes leftToRight {
+  0% {
+    fill-opacity: 0.5;
+  }
+  16.66% {
+    fill-opacity: 1;
+  }
+  33.33%,
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes topToBottom {
+  0%,
+  33.33% {
+    fill-opacity: 0.5;
+  }
+  49.99% {
+    fill-opacity: 1;
+  }
+  66.66%,
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes rightToLeft {
+  0%,
+  66.66% {
+    fill-opacity: 0.5;
+  }
+  83.32% {
+    fill-opacity: 1;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes bottomToTop {
+  0%,
+  83.33% {
+    fill-opacity: 0.5;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
